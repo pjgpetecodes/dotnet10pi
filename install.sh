@@ -128,7 +128,7 @@ downloadspage=$(wget -qO - https://dotnet.microsoft.com/download/$dotnettype/$do
 
 detectArch
 
-download 'href="([^"]*sdk-[^"/]*linux-'$arch'-binaries)"' $sdkfile
+download 'href="([^"]*sdk-[^"/]*linux-'$arch'-binaries-targz)"' $sdkfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -136,7 +136,7 @@ echo -e "\e[1m       Getting ASP.NET Runtime $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-download 'href="([^"]*aspnetcore-[^"/]*linux-'$arch'-binaries)"' $aspnetfile
+download 'href="([^"]*aspnetcore-[^"/]*linux-'$arch'-binaries-targz)"' $aspnetfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
